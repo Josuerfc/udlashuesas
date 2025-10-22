@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>UD Las Huesas</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/efect.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="#inicio">
+          <img src="img/escudo.png" alt="Escudo UD Las Huesas" class="escudo-navbar">
+          <span class="metallic-text">UD Las Huesas</span>
+        </a>
+      </div>
+
+      <ul class="menu">
+        <li><a href="#inicio">INICIO</a></li>
+	<li><a href="#noticias">NOTICIAS</a></li>
+        <li><a href="#sobre">SOBRE NOSOTROS</a></li>
+        <li><a href="#portafolio">PORTAFOLIO</a></li>
+        <li><a href="#interes">ENLACES</a></li>
+        <li><a href="#contacto">CONTACTO</a></li>
+        <li><a href="#calendario">CALENDARIO</a></li>
+      </ul>
+
+      <div class="menu-toggle" id="toggle">☰</div>
+
+      <!-- Login -->
+      <form class="login-form" action="/login" method="post">
+        <span class="login-icon"><i class="fas fa-user"></i></span>
+        <input type="text" name="usuario" placeholder="Usuario" required>
+        <input type="password" name="clave" placeholder="Clave" required>
+        <button type="submit">Entrar</button>
+      </form>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="lema-container">
+        <img src="img/escudo.png" alt="Escudo UD Las Huesas" class="escudo">
+        <h1 class="bienvenida">Bienvenidos a la UD Las Huesas</h1>
+        <p class="lema">Formamos personas - Creamos jugadores.</p>
+        <a href="#sobre" class="btn">Sobre Nosotros</a>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+<section id="noticias" class="seccion">
+  <div class="carrusel-noticias">
+    <button class="btn-noticia prev">←</button>
+    <div class="contenido-noticia fade"></div>
+    <button class="btn-noticia next">→</button>
+  </div>
+
+  <div class="puntos-navegacion"></div>
+
+  <div class="noticias-anteriores">
+    <h3>Noticias anteriores</h3>
+    <div class="tarjetas-noticias"></div>
+  </div>
+</section>
+
+ <div class="divider"></div>
+
+  <!-- Sobre nosotros -->
+    <section id="sobre" class="about">
+      <h2>Nuestra Historia</h2>
+      <p>El club UD Las Huesas, fue creado en 1992 por cuatro socios fundadores. Comenzó su andadura en este deporte con tan solo un equipo dentro de su estructura, y en la actualidad cuenta con 13 equipos distribuidos entre las categorías PREBENJAMÍN y REGIONAL. Además, también alberga equipos de MINIS y FORMACIÓN. Teniendo un total de más de 250 jugadores en la entidad.</p>
+      <div class="values">
+        <div class="value-box">
+          <i class="fas fa-bullseye"></i>
+          <h3>Misión</h3>
+          <p>Fomentar el deporte base y el desarrollo personal de nuestros jugadores. Haciéndole justicia al lema de la UD Las Huesas, lo primordial es formar a personas, y a raíz de eso crear jugadores.</p>
+        </div>
+        <div class="value-box">
+          <i class="fas fa-eye"></i>
+          <h3>Visión</h3>
+          <p>Ser referente en el fútbol Teldense y canario por nuestra formación y compromiso social.</p>
+        </div>
+        <div class="value-box">
+          <i class="fas fa-heart"></i>
+          <h3>Valores</h3>
+          <p>Respeto, esfuerzo, trabajo en equipo y pasión por el juego.</p>
+        </div>
+      </div>
+    </section>
+
+<div class="divider"></div>
+
+  <!-- Portafolio -->
+    <section id="portafolio" class="portfolio">
+  <h2>Portafolio Multimedia</h2>
+  <div class="gallery">
+    <a href="categorias/equipo/index.html" class="card">
+      <img src="img/Temporada_25_26.jpg" alt="Foto del equipo">
+      <p>Fotos oficiales del equipo</p>
+    </a>
+    <a href="categorias/entrenamiento/index.html" class="card">
+      <img src="img/Entrenamiento.jpg" alt="Entrenamiento">
+      <p>Sesiones de entrenamientos</p>
+    </a>
+    <a href="categorias/celebracion/index.html" class="card">
+      <img src="img/Victorias.jpg" alt="Celebración">
+      <p>Celebración tras la victoria</p>
+    </a>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- Enlaces y patrocinadores -->
+<section id="interes" class="links">
+  <h2>Enlaces de Interés y Patrocinadores</h2>
+
+  <ul>
+    <li>
+      <a href="https://www.fiflp.com/pnfg/" target="_blank">
+        <img src="img/logos/fiflp.png" alt="Logo FIFLP" class="logo-enlace">
+        Federación Interinsular de Fútbol de Las Palmas
+      </a>
+    </li>
+    <li>
+      <a href="https://www.macaronesiasport.com" target="_blank">
+        <img src="img/logos/macaronesiasport.png" alt="Logo Macaronesia" class="logo-enlace">
+        Noticias Deporte Canarias
+      </a>
+    </li>
+  </ul>
+
+  <!-- Carrusel de patrocinadores integrado -->
+  <div class="patrocinador-carousel">
+  <h3>Patrocinadores Oficiales</h3>
+  <div class="carousel-wrapper">
+    <div class="carousel-track" id="carouselTrack">
+      <div class="patrocinador">
+	<a href="#">
+  	<img src="img/patrocinadores/PIÑATAS.jpg" alt="Patrocinador 1">
+  	<span class="nombre">Piñatas Canarias</span></a>
+      </div>
+      <div class="patrocinador">
+	<a href="#">
+  	<img src="img/patrocinadores/ARIDANE.png" alt="Patrocinador 2">
+  	<span class="nombre">Instalaciones Eléctricas Aridane</span></a>
+      </div>
+      <div class="patrocinador">
+	<a href="#">
+  	<img src="img/patrocinadores/CECOSEM.png" alt="Patrocinador 3">
+  	<span class="nombre">CECOSEM</span></a>
+      </div>	      
+      <div class="patrocinador">
+	<a href="#">
+  	<img src="img/patrocinadores/DIVINITY.jpg" alt="Patrocinador 4">
+  	<span class="nombre">Divinity Fashion</span></a>
+      </div>	      
+      <div class="patrocinador">
+	<a href="#">
+  	<img src="img/patrocinadores/ESCAMILLA.png" alt="Patrocinador 5">
+  	<span class="nombre">Escamilla</span></a>
+      </div>	      
+      <div class="patrocinador">
+	<a href="#">
+  	<img src="img/patrocinadores/FERRETERIA.png" alt="Patrocinador 6">
+  	<span class="nombre">Ferretería Costas Salinas</span></a>
+      </div>	      
+      <div class="patrocinador">
+	<a href="#">
+  	<img src="img/patrocinadores/FIFLP.jpg" alt="Patrocinador 7">
+  	<span class="nombre">FIFLP</span></a>
+      </div>	      
+      <div class="patrocinador">
+	<a href="#">
+  	<img src="img/patrocinadores/FUTBOLERIA.png" alt="Patrocinador 8">
+  	<span class="nombre">Futbolería Canaria</span></a>
+      </div>	      
+      <div class="patrocinador">
+	<a href="#">
+  	<img src="img/patrocinadores/LUANVI.png" alt="Patrocinador 9">
+  	<span class="nombre">Luanvi</span></a>
+      </div>	      
+      <div class="patrocinador">
+	<a href="#">
+  	<img src="img/patrocinadores/MARIMORENA.png" alt="Patrocinador 10">
+  	<span class="nombre">La Marimorena</span></a>
+      </div>	      
+      <div class="patrocinador">
+	<a href="#">
+  	<img src="img/patrocinadores/MIAMI.png" alt="Patrocinador 11">
+  	<span class="nombre">Estudio Miami 1906</span></a>
+      </div>	      
+      <div class="patrocinador">
+	<a href="#">
+  	<img src="img/patrocinadores/PARADISE.jpg" alt="Patrocinador 12">
+  	<span class="nombre">Paradise Beach</span></a>
+      </div>	      
+      <div class="patrocinador">
+	<a href="#">
+  	<img src="img/patrocinadores/PINTURAS.png" alt="Patrocinador 13">
+  	<span class="nombre">ANR, S.L.</span></a>
+      </div>	      
+      <div class="patrocinador">
+	<a href="#">
+  	<img src="img/patrocinadores/SPAR.png" alt="Patrocinador 14">
+  	<span class="nombre">Supermercados SPAR</span></a>
+      </div>	      
+      <div class="patrocinador">
+	<a href="#">
+  	<img src="img/patrocinadores/TELDE.jpg" alt="Patrocinador 15">
+  	<span class="nombre">Telde, Ciudad Deportiva</span></a>
+      </div>	      
+      <div class="patrocinador">
+	<a href="#">
+  	<img src="img/patrocinadores/TELDEFLOR.png" alt="Patrocinador 16">
+  	<span class="nombre">Telde Flor</span></a>
+      </div>	      
+      <div class="patrocinador">
+	<a href="#">
+  	<img src="img/patrocinadores/TRAZOS.jpg" alt="Patrocinador 17">
+  	<span class="nombre">trazos Insulares, S.L.</span></a>
+      </div>	      
+      <div class="patrocinador">
+	<a href="#">
+  	<img src="img/patrocinadores/UNIDE.png" alt="Patrocinador 18">
+  	<span class="nombre">Supermercado UNIDE</span></a>
+      </div>	      
+      <div class="patrocinador">
+	<a href="#">
+  	<img src="img/patrocinadores/WHITE.png" alt="Patrocinador 19">
+  	<span class="nombre">Chinawhite Club Gran Canaria</span></a>
+      </div>	      
+    </div>
+  </div>
+</div>
+</section>
+
+<div class="divider"></div>
+
+ <!-- Contacto -->
+ <section id="contacto" class="contact">
+  <h2>Contacto</h2>
+
+  <div class="contact-columns">
+    <form action="mailto:udlashuesas@telefonica.net" method="post" enctype="text/plain">
+      <input type="text" name="nombre" placeholder="Tu nombre" required>
+      <input type="email" name="correo" placeholder="Tu correo" required>
+      <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+
+    <div class="mapa">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d773.662990773613!2d-15.39575661552952!3d27.98719108489206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc40bd5268c0078b%3A0xcf2a8cbbf13a339e!2sCampo%20De%20Futbol%20Las%20Huesas!5e1!3m2!1ses-419!2ses!4v1758785049487!5m2!1ses-419!2ses" 
+        allowfullscreen 
+        loading="lazy">
+      </iframe>
+    </div>
+  </div>
+
+  <div class="info">
+    <p>📍 Calle Íñigo López de Mendoza, 1 – Las Huesas – Telde, Gran Canaria</p>
+    <p>📧 udlashuesas@telefonica.net</p>
+    <p>📞 +34 639 710 495</p>
+  </div>
+</section>
+
+
+<div class="divider"></div>
+
+<section id="calendario" class="calendar">
+  <h2>Calendario de Partidos</h2>
+  <div class="fixture">
+    <table id="tabla-calendario">
+      <thead>
+        <tr>
+          <th>Fecha</th>
+          <th>Rival</th>
+          <th>Hora</th>
+          <th>Campo</th>
+          <th>Resultado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Se llenará dinámicamente -->
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<footer>
+  <p class="lema-footer">“Formamos personas - Creamos jugadores.”</p>
+
+  <nav class="social">
+    <a href="https://facebook.com/tu-pagina" target="_blank" rel="noopener" aria-label="Facebook">
+      <!-- Facebook -->
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M22 12.06C22 6.51 17.52 2 12 2S2 6.51 2 12.06c0 4.99 3.66 9.13 8.44 9.94v-7.03H7.9V12.06h2.54V9.89c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.83h2.78l-.44 2.91h-2.34v7.03C18.34 21.19 22 17.05 22 12.06z"/>
+      </svg>
+    </a>
+
+    <a href="https://www.instagram.com/udlashuesasoficial" target="_blank" rel="noopener" aria-label="Instagram">
+      <!-- Instagram -->
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.95.24 2.41.4.61.24 1.05.53 1.52 1 .47.47.76.91 1 1.52.16.46.35 1.24.4 2.41.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.24 1.95-.4 2.41-.24.61-.53 1.05-1 1.52-.47.47-.91.76-1.52 1-.46.16-1.24.35-2.41.4-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.95-.24-2.41-.4-.61-.24-1.05-.53-1.52-1-.47-.47-.76-.91-1-1.52-.16-.46-.35-1.24-.4-2.41C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.24-1.95.4-2.41.24-.61.53-1.05 1-1.52.47-.47.91-.76 1.52-1 .46-.16 1.24-.35 2.41-.4C8.42 2.17 8.8 2.16 12 2.16zm0 2.02c-3.15 0-3.52.01-4.76.07-.98.05-1.51.21-1.87.35-.47.18-.8.4-1.15.76-.36.35-.58.68-.76 1.15-.14.36-.3.89-.35 1.87-.06 1.24-.07 1.61-.07 4.76s.01 3.52.07 4.76c.05.98.21 1.51.35 1.87.18.47.4.8.76 1.15.35.36.68.58 1.15.76.36.14.89.3 1.87.35 1.24.06 1.61.07 4.76.07s3.52-.01 4.76-.07c.98-.05 1.51-.21 1.87-.35.47-.18.8-.4 1.15-.76.36-.35.58-.68.76-1.15.14-.36.3-.89.35-1.87.06-1.24.07-1.61.07-4.76s-.01-3.52-.07-4.76c-.05-.98-.21-1.51-.35-1.87-.18-.47-.4-.8-.76-1.15-.35-.36-.68-.58-1.15-.76-.36-.14-.89-.3-1.87-.35-1.24-.06-1.61-.07-4.76-.07zm0 3.43a4.39 4.39 0 1 1 0 8.78 4.39 4.39 0 0 1 0-8.78zm6.02-1.69a1.02 1.02 0 1 1 0 2.04 1.02 1.02 0 0 1 0-2.04z"/>
+      </svg>
+    </a>
+
+    <a href="https://x.com/tu-pagina" target="_blank" rel="noopener" aria-label="X">
+      <!-- X (Twitter) -->
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M18.244 2H21l-6.54 7.48L22 22h-6.09l-4.76-6.4L5.6 22H3l7.15-8.18L2 2h6.19l4.29 5.78L18.244 2zM7.04 3.72H4.38l13.04 16.56h2.66L7.04 3.72z"/>
+      </svg>
+    </a>
+
+    <a href="https://youtube.com/tu-pagina" target="_blank" rel="noopener" aria-label="YouTube">
+      <!-- YouTube -->
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M23.5 6.2a4.1 4.1 0 0 0-2.9-2.9C18.7 2.7 12 2.7 12 2.7s-6.7 0-8.6.6A4.1 4.1 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a4.1 4.1 0 0 0 2.9 2.9c1.9.6 8.6.6 8.6.6s6.7 0 8.6-.6a4.1 4.1 0 0 0 2.9-2.9c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.3V8.7L15.8 12l-6.2 3.3z"/>
+      </svg>
+    </a>
+  </nav>
+
+  <p>© 2025 UD Las Huesas. Todos los derechos reservados.</p>
+</footer>
+
+  <script src="js/main.js"></script>
+  <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+
+<!-- Botón scroll arriba -->
+<button id="btn-scroll-top" aria-label="Volver arriba">↑</button>
+  </body>
+</html>
