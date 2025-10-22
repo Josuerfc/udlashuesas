@@ -1,0 +1,20 @@
+[
+  {
+    "titulo": "Victoria en el derbi",
+    "fecha": "2025-10-20",
+    "contenido": "El UD Las Huesas venció 2-1 en un partido emocionante...",
+    "categoria": "Deportes"
+  },
+  {
+    "titulo": "Nuevo patrocinador",
+    "fecha": "2025-10-18",
+    "contenido": "Presentamos a nuestro nuevo patrocinador oficial...",
+    "categoria": "Institucional"
+  },
+  {
+    "titulo": "Convocatoria juvenil",
+    "fecha": "2025-10-15",
+    "contenido": "Se abre la inscripción para la cantera sub-16...",
+    "categoria": "Juvenil"
+  }
+]
