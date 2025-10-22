@@ -1,0 +1,44 @@
+/* ======== RESET BÁSICO ======== */
+
+/* Box-sizing universal */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Desplazamiento suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Quitar estilos por defecto de listas */
+ul, ol {
+  list-style: none;
+}
+
+/* Quitar estilos por defecto de enlaces */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Imágenes fluidas */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* evita espacios en blanco debajo de imágenes */
+}
+
+/* Centrado específico del escudo de bienvenida */
+.lema-container img {
+  margin: 0 auto; /* centra horizontalmente */
+}
+
+/* Quitar estilos por defecto de tablas */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
