@@ -1,0 +1,52 @@
+/* ======== ANIMACIONES DE ESCALA ======== */
+@keyframes pulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+@keyframes pulseClick {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* ======== ANIMACIÓN DE BARRIDO (texto metálico) ======== */
+@keyframes sweep {
+  0%   { background-position: -100% center; }
+  100% { background-position: 100% center; }
+}
+
+/* ======== EFECTO DE APARICIÓN (fade + slide up) ======== */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Variante para títulos */
+.fade-in-up-title {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+.fade-in-up-title.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ======== RESPETO A USUARIOS CON REDUCCIÓN DE MOVIMIENTO ======== */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
