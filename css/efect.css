@@ -1,0 +1,336 @@
+/* Estilo flotante sin efecto hover */
+section > div,
+section .lema-container,
+section .value-box,
+section .card,
+section .info,
+section form {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  color: #f5f5f5;
+}
+
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  background: transparent; /* elimina fondo blanco */
+  padding: 1rem 0;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 3rem;
+  animation: scroll 30s linear infinite;
+}
+
+.patro-logo {
+  height: 100px;
+  filter: grayscale(100%);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.patro-logo:hover {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+
+.carousel:hover .carousel-track {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* ajusta según cantidad de logos duplicados */
+}
+
+.carousel-track a {
+  background: transparent !important;
+  padding: 0;
+  border: none;
+}
+
+.carousel-track a:hover {
+  background: transparent !important;
+}
+
+.links a {
+  color: #fff;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: text-shadow 0.4s ease, color 0.4s ease;
+}
+
+.links a:hover {
+  text-shadow:
+    0 0 12px rgba(255, 255, 255, 0.9),
+    0 0 24px rgba(255, 255, 255, 0.6),
+    0 0 36px rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+  background: transparent !important;
+}
+
+.links a img.logo-enlace {
+  height: 24px;
+  width: auto;
+  transition: filter 0.4s ease, transform 0.4s ease;
+  filter: brightness(0.8);
+}
+
+.links a:hover img.logo-enlace {
+  filter: brightness(1.8) drop-shadow(0 0 12px rgba(255, 255, 255, 0.7));
+  transform: scale(1.15);
+}
+
+/* Texto de logos patrocinadores */
+.patrocinador {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.patrocinador img {
+  display: block;
+  height: 80px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.patrocinador:hover img {
+  transform: scale(1.1);
+}
+
+.patrocinador .nombre {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 5px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.3s ease;
+}
+
+.patrocinador:hover .nombre {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Pie de página */
+footer {
+  background-color: #111; /* fondo oscuro */
+  color: #eee;
+  text-align: center;
+  padding: 2rem 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Línea inferior */
+footer {
+  background-color: #111;
+  color: #eee;
+  text-align: center;
+  padding: 2rem 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Línea inferior animada en naranja con resplandor */
+footer::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(90deg, transparent, #FF6600, transparent);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-size: 200% 100%;
+  animation: brillo 3s infinite linear;
+  box-shadow: 0 0 8px #FF6600;
+}
+
+@keyframes brillo {
+  from { background-position: -200px 0; }
+  to { background-position: 200px 0; }
+}
+
+footer .lema-footer {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #FF6600;
+  margin-bottom: 0.75rem;
+  font-style: italic;
+}
+
+/* Social icons */
+footer .social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0.75rem 0 1rem;
+}
+
+footer .social a {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255, 102, 0, 0.12);
+  transition: transform 200ms ease, box-shadow 200ms ease, background 200ms ease;
+}
+
+footer .social a:hover {
+  transform: translateY(-2px) scale(1.06);
+  background: rgba(255, 102, 0, 0.22);
+  box-shadow: 0 0 12px rgba(255, 102, 0, 0.6);
+}
+
+footer .social svg {
+  width: 22px;
+  height: 22px;
+  fill: #eee;
+  transition: fill 200ms ease;
+}
+
+footer .social a:hover svg {
+  fill: #FF6600; /* color naranja en hover */
+}
+
+footer p:last-child {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+footer {
+  background-color: #111;
+  color: #eee;
+  text-align: center;
+  padding: 2rem 1rem;
+  position: relative;
+  overflow: hidden;
+
+  /* Estado inicial (oculto) */
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Estado visible (cuando entra en pantalla) */
+footer.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Línea inferior animada en naranja */
+footer::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(90deg, transparent, #FF6600, transparent);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-size: 200% 100%;
+  animation: brillo 3s infinite linear;
+  box-shadow: 0 0 8px #FF6600;
+}
+
+@keyframes brillo {
+  from { background-position: -200px 0; }
+  to { background-position: 200px 0; }
+}
+
+footer .lema-footer {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #FF6600;
+  margin-bottom: 0.75rem;
+  font-style: italic;
+}
+
+footer p:last-child {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Botón scroll arriba */
+#btn-scroll-top {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  background-color: #FF6600;
+  color: #fff;
+  font-size: 1.4rem;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(255, 102, 0, 0.6);
+  transition: opacity 0.5s ease, transform 0.3s ease, background-color 0.3s ease;
+  z-index: 999;
+
+  /* Estado inicial oculto */
+  opacity: 0;
+  pointer-events: none;
+}
+
+#btn-scroll-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#btn-scroll-top:hover {
+  background-color: #e65c00;
+  transform: translateY(-3px) scale(1.08);
+}
+
+/*Divisores*/
+.divider {
+  height: 2px;
+  width: 100%; /* ocupa todo el ancho de la pantalla */
+  background: linear-gradient(90deg, rgba(255,102,0,0), #FF6600, rgba(255,102,0,0));
+  background-size: 200% 100%;
+  animation: dividerShimmer 5s linear infinite;
+  box-shadow: 0 0 6px rgba(255,102,0,0.35);
+
+  /* eliminamos márgenes */
+  margin: 0;
+}
+@keyframes dividerShimmer {
+  from { background-position: -200% 0; }
+  to   { background-position: 200% 0; }
+}
+
+/* Respeto a usuarios con reducción de movimiento */
+@media (prefers-reduced-motion: reduce) {
+  .divider { animation: none; }
+}
+
+.punto {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.punto.activo {
+  background-color: #f57c00;
+  transform: scale(1.4);
+}
