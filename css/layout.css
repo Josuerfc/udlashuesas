@@ -1,0 +1,170 @@
+/* ======== HEADER ======== */
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: #000;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+/* ======== NAVBAR ======== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem 2rem;
+  gap: 1rem;
+}
+
+/* ======== MENÚ PRINCIPAL ======== */
+.menu {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li a {
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+  color: #FF6600;
+}
+
+/* ======== BOTÓN TOGGLE (MÓVILES) ======== */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* ======== FOOTER ======== */
+footer {
+  background: #111;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  color: #eee;
+  font-size: 0.9rem;
+}
+
+/* ======== FORMULARIO + MAPA ======== */
+.contact-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+}
+
+.contact-columns form {
+  flex: 1 1 500px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.contact-columns input,
+.contact-columns textarea {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 4px;
+  background: #222;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.contact-columns textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.contact-columns button {
+  padding: 0.8rem;
+  background: linear-gradient(90deg, #FF6600, #FF9500);
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(255, 102, 0, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.contact-columns button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(255, 102, 0, 0.6);
+  background: #e65c00;
+}
+
+.contact-columns .mapa {
+  flex: 1 1 500px;
+  max-width: 600px;
+  display: flex;
+  align-items: stretch;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.contact-columns .mapa iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 350px;
+  border: 0;
+  border-radius: 10px;
+}
+
+/* ======== INFORMACIÓN DE CONTACTO DEBAJO ======== */
+.contact .info {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 8px;
+  max-width: 800px;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contact .info p {
+  margin: 0.3rem 0;
+  text-shadow: 0 0 6px #000; /* resplandor exterior negro */
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 768px) {
+  .contact-columns {
+    flex-direction: column;
+  }
+
+  .contact-columns form,
+  .contact-columns .mapa {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .contact-columns .mapa iframe {
+    min-height: 250px;
+  }
+}
+
+/* ======== PREVENCIÓN DE DESBORDAMIENTO HORIZONTAL ======== */
+html, body {
+  overflow-x: hidden;
+}
