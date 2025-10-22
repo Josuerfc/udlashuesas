@@ -1,0 +1,109 @@
+/* ======== responsive.css ======== */
+
+/* ======== GENERAL: secciones y layout ======== */
+@media (max-width: 768px) {
+  section {
+    padding: 2rem 1rem;
+  }
+
+  .values,
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-content {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* ======== MENÚ HAMBURGUESA ======== */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background-color: #000;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: max-height 0.3s ease;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu li {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .menu a {
+    color: #fff;
+    font-size: 1.2rem;
+  }
+}
+
+/* ======== CARRUSEL DE PATROCINADORES ======== */
+@media (max-width: 768px) {
+  .carousel-track {
+    gap: 1rem;
+    animation-duration: 40s;
+  }
+
+  .carousel-track a img {
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-track a img {
+    height: 50px;
+  }
+}
+
+/* Pausar animación al tocar en móviles */
+.patrocinador-carousel:active .carousel-track,
+.patrocinador-carousel:hover .carousel-track {
+  animation-play-state: paused;
+}
+
+/* ======== MODO TÁCTIL (scroll manual en carrusel) ======== */
+.carousel {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 2rem;
+  scroll-snap-align: start;
+  padding: 1rem;
+}
+
+.patro-logo {
+  height: 100px;
+  filter: grayscale(100%);
+  transition: transform 0.3s ease, filter
+}
+
+/* Responsive Contacto */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-form,
+  .contact-info {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .contact-info .map iframe
